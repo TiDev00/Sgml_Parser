@@ -25,9 +25,8 @@ if __name__ == '__main__':
     while ask_filepath:
         filepath = input("\nEnter a path to a sgml file : ")
         if filepath and Path(os.path.expanduser(filepath)).is_file():
-            extraction(Path(os.path.expanduser(filepath)))
+            extraction(filepath)
             print("\nExtraction done...")
             ask_filepath = False
         else:
             print("\nInvalid filepath...")
-
