@@ -1,4 +1,6 @@
+import os
 import codecs
+from pathlib import Path
 import contextlib
 
 from bs4 import BeautifulSoup
@@ -17,6 +19,16 @@ def extraction(file):
                     [print(x.strip()) for x in lines_in_item if x.strip()!= ""]
             external_file.close()
 
-extraction('test-fren.en.sgm')
-extraction('test-fren.fr.sgm')
+
+# Fonction main 
+if __name__ == '__main__':
+    ask_filepath = True
+    while ask_filepath:
+        filepath = input("\nEnter a path to a sgml file : ")
+        if filepath and Path(os.path.expanduser(filepath)).is_file():
+            extraction(Path(os.path.expanduser(filepath)))
+            print("Extraction done...")
+            ask_filepath = False
+        else:
+            print("Invalid filepath...")
 
