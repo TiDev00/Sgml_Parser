@@ -2,7 +2,6 @@ import os
 import codecs
 from pathlib import Path
 import contextlib
-
 from bs4 import BeautifulSoup
 
 def extraction(file):
