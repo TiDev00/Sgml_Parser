@@ -1,4 +1,4 @@
 # Sgml_Parser
 SGML file converter
 
-Tool to convert sgml file from WMT to txt file
+Tool to convert sgml file to txt file
